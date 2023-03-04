@@ -38,32 +38,32 @@ const questions = [
     ],
   },
   {
-    type:"input",
-    name:"contributors",
-    message:"List all those who contributed on this project"
+    type: "input",
+    name: "contributors",
+    message: "List all those who contributed on this project",
   },
   {
-    type:"input",
-    name:"tests",
-    message:"include any tests?"
+    type: "input",
+    name: "tests",
+    message: "include any tests?",
   },
   {
-    type:"input",
-    name:"username",
-    message:"Enter GitHub username:"
+    type: "input",
+    name: "username",
+    message: "Enter GitHub username:",
   },
   {
-    type:"input",
-    name:"email",
-    message:"Enter email address:"
-  }
+    type: "input",
+    name: "email",
+    message: "Enter email address:",
+  },
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    return function(answers){
-        return answers[fileName, data];
-    }
+  return function (answers) {
+    return answers[(fileName, data)];
+  };
 }
 
 // TODO: Create a function to initialize app
