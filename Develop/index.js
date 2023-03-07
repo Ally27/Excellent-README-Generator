@@ -30,11 +30,7 @@ const questions = [
       "Apache",
       "GNU",
       "MIT",
-      "Boost",
-      "BSD",
-      "Eclipse",
       "Mozilla",
-      "Unlicense",
     ],
   },
   {
@@ -61,15 +57,21 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  return function (answers) {
-    return answers[(fileName, data)];
-  };
+  fs.writeFile(fileName, data, (err) => {
+    if (err) throw err;
+    console.log(`${fileName}`);
+  });
 }
 
 // TODO: Create a function to initialize app
+
+// this needs to be file name and type 
 function init() {
-  // This section will need to run inquirer.
-  // you can find what needs to go here in the documents
+  inquirer
+  .prompt(questions)
+  .then((userData) => {
+    writeToFile("README.md",generateMarkdown({...userData}));
+  });
 }
 
 // Function call to initialize app
