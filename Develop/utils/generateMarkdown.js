@@ -1,5 +1,5 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+//A function that returns a license badge based on which license is passed in
+// If there is no license, returns an empty string
 function renderLicenseBadge(license) {
   switch (license) {
     case "Apache License 2.0":
@@ -12,32 +12,60 @@ function renderLicenseBadge(license) {
       return "";
   }
 }
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+//Function that returns the license link
+// If there is no license, returns an empty string
 function renderLicenseLink(license) {
   switch (license) {
-    case "Apache License 2.0":
+    case "Apache":
       return "(https://opensource.org/licenses/Apache-2.0)";
-    case "GNU License":
+    case "GNU":
       return "(https://www.gnu.org/licenses/gpl-3.0)";
-    case "MIT License":
+    case "MIT":
       return "(https://opensource.org/licenses/MIT)";
-    case "Mozilla License 2.0":
+    case "Mozilla":
       return "(https://www.mozilla.org/en-US/MPL/2.0/";
     default:
-      return "";
+      return "none";
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+//A function that returns the license section of README
+// If there is no license, it returns an empty string
+function renderLicenseSection(license) {
+  if (license) {
+    return ` ${renderLicenseLink(license)}`;
+  } else {
+    return " ";
+  }
+}
 
-// TODO: Create a function to generate markdown for README
+function renderTableofContents(Contents) {
+  return (
+    "## Table of Contents\n" +
+    "* [Installation](#installation)\n" +
+    "* [Usage](#usage)\n" +
+    "* [Description](#description)\n" +
+    "* [Contributors](#contributors)\n" +
+    "* [Tests](#tests)\n"
+  );
+}
+
+// A function to generate markdown for README
+
 function generateMarkdown(userData) {
-  return `# ${userData.title}`;
-  //here should be the readme information
-  //place all types here example (license)
+  return `# ${userData.title}\n\n ## Installation\n${
+    userData.installation
+  }\n ## Usage \n${userData.usage} \n## Description\n${
+    userData.description
+  }\n ## Contributors \n${userData.contributors} \n ## Tests ${
+    userData.tests
+  }\n ${renderTableofContents(userData.Contents)} ## GitHub \n [${
+    userData.gitHub
+  }](https://github.com/${userData.gitHub}) \n ## Email ${
+    userData.Email
+  }\n ## License ${renderLicenseSection(
+    userData.license
+  )}\n ${renderLicenseBadge(userData.license)}`;
 }
 
 module.exports = generateMarkdown;

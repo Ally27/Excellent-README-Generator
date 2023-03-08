@@ -1,7 +1,6 @@
 //Requesting access
 const inquirer = require("inquirer");
 const fs = require("fs");
-//This is accessing the utils folder into generateMarkdown.js file
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // An array of questions for user input
@@ -21,17 +20,16 @@ const questions = [
     name: "usage",
     message: "What is the usage for this project?",
   },
-
+  {
+    type: "input",
+    name: "description",
+    message: "Enter the description",
+  },
   {
     type: "list",
     name: "license",
     message: "Select a license for this project",
-    choices: [
-      "Apache",
-      "GNU",
-      "MIT",
-      "Mozilla",
-    ],
+    choices: ["Apache", "GNU", "MIT", "Mozilla"],
   },
   {
     type: "input",
@@ -45,17 +43,17 @@ const questions = [
   },
   {
     type: "input",
-    name: "username",
+    name: "gitHub",
     message: "Enter GitHub username:",
   },
   {
     type: "input",
-    name: "email",
+    name: "Email",
     message: "Enter email address:",
   },
 ];
 
-// TODO: Create a function to write README file
+// Writes Readme File
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) => {
     if (err) throw err;
@@ -63,16 +61,12 @@ function writeToFile(fileName, data) {
   });
 }
 
-// TODO: Create a function to initialize app
-
-// this needs to be file name and type 
+// Initializing the app
 function init() {
-  inquirer
-  .prompt(questions)
-  .then((userData) => {
-    writeToFile("README.md",generateMarkdown({...userData}));
+  inquirer.prompt(questions).then((userData) => {
+    writeToFile("README.md", generateMarkdown({ ...userData }));
   });
 }
 
-// Function call to initialize app
+// Calls to initialize the app
 init();
