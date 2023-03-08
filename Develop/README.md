@@ -1,7 +1,7 @@
-# Ex readme
+# Excellent-README-Generator
 
  ## Description
-decription
+Provide a short description explaining the what, why, and how of your project.
   
  ## Table of Contents
 * [Installation](#installation)
@@ -12,18 +12,18 @@ decription
 
   
 ## Installation
-install here
+Provide a step-by-step description of how to get the development environment running.
  ## Usage 
-to use
+Provide instructions and examples for use. Include screenshots as needed.
  ## Contributors 
-me
+List your collaborators, if any, with links to their GitHub profiles.
  ## GitHub 
  [Ally27](https://github.com/Ally27) 
  ## Email 
-me@me
+allysonmg21@gmail.com
  ## License
   (https://opensource.org/licenses/MIT)
  
   
  ## Tests 
-yes
+N
