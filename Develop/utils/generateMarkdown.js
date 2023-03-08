@@ -53,19 +53,18 @@ function renderTableofContents(Contents) {
 // A function to generate markdown for README
 
 function generateMarkdown(userData) {
-  return `# ${userData.title}\n\n ## Installation\n${
-    userData.installation
-  }\n ## Usage \n${userData.usage} \n## Description\n${
-    userData.description
-  }\n ## Contributors \n${userData.contributors} \n ## Tests ${
-    userData.tests
-  }\n ${renderTableofContents(userData.Contents)} ## GitHub \n [${
+  return `# ${userData.title}\n\n ## Description\n${userData.description}
+  \n ${renderTableofContents(userData.Contents)}
+  \n## Installation\n${userData.installation}\n ## Usage \n${
+    userData.usage
+  }\n ## Contributors \n${userData.contributors}\n ## GitHub \n [${
     userData.gitHub
-  }](https://github.com/${userData.gitHub}) \n ## Email ${
+  }](https://github.com/${userData.gitHub}) \n ## Email \n${
     userData.Email
-  }\n ## License ${renderLicenseSection(
+  }\n ## License\n ${renderLicenseSection(
     userData.license
-  )}\n ${renderLicenseBadge(userData.license)}`;
+  )}\n ${renderLicenseBadge(userData.license)}
+  \n ## Tests \n${userData.tests}`;
 }
 
 module.exports = generateMarkdown;

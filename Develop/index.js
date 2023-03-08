@@ -12,8 +12,13 @@ const questions = [
   },
   {
     type: "input",
+    name: "description",
+    message: "Enter the description",
+  },
+  {
+    type: "input",
     name: "installation",
-    message: "describe the process of installation",
+    message: "Describe the process of installation",
   },
   {
     type: "input",
@@ -22,24 +27,14 @@ const questions = [
   },
   {
     type: "input",
-    name: "description",
-    message: "Enter the description",
+    name: "contributors",
+    message: "List all those who contributed on this project",
   },
   {
     type: "list",
     name: "license",
     message: "Select a license for this project",
     choices: ["Apache", "GNU", "MIT", "Mozilla"],
-  },
-  {
-    type: "input",
-    name: "contributors",
-    message: "List all those who contributed on this project",
-  },
-  {
-    type: "input",
-    name: "tests",
-    message: "include any tests?",
   },
   {
     type: "input",
@@ -50,6 +45,11 @@ const questions = [
     type: "input",
     name: "Email",
     message: "Enter email address:",
+  },
+  {
+    type: "input",
+    name: "tests",
+    message: "Include any tests?",
   },
 ];
 

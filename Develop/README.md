@@ -1,22 +1,29 @@
-# Title Here
+# Ex readme
 
- ## Installation
-install here
- ## Usage 
-use here 
-## Description
-discropt here
- ## Contributors 
-Me 
- ## Tests yes
+ ## Description
+decription
+  
  ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
 * [Description](#description)
 * [Contributors](#contributors)
 * [Tests](#tests)
+
+  
+## Installation
+install here
+ ## Usage 
+to use
+ ## Contributors 
+me
  ## GitHub 
  [Ally27](https://github.com/Ally27) 
- ## Email allysonmg21@gmail.com
- ## License  (https://www.gnu.org/licenses/gpl-3.0)
+ ## Email 
+me@me
+ ## License
+  (https://opensource.org/licenses/MIT)
  
+  
+ ## Tests 
+yes
