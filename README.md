@@ -1,6 +1,8 @@
 # Excellent-README-Generator
 
-## Description
+![](./assets/images/sniptit.PNG)
+
+# Description
 This simple node based application that is designed to create a README.md file with just a few questions.
 
 ## Table of Contents
@@ -9,6 +11,9 @@ This simple node based application that is designed to create a README.md file w
 * [Description](#description)
 * [Contributors](#contributors)
 * [Tests](#tests)
+
+# Video Walkthrough
+[Short Walkthrough Video](https://drive.google.com/file/d/1Viq1cAbHA0t3MQ_U5iL_-DeXSZEIlEk8/view)
 
 ## Installation
 Download Node.js
@@ -20,5 +25,8 @@ List your collaborators, if any, with links to their GitHub profiles.
  [Ally27](https://github.com/Ally27) 
 ## Email 
 allysonmg21@gmail.com
+## Deployed application
+[Excellent README Generator](https://ally27.github.io/Excellent-README-Generator/)
+
 ## License  
 (https://opensource.org/licenses/MIT)
